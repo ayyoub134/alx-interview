@@ -6,12 +6,12 @@ def is_safe(board, row, col, N):
     for i in range(row):
         if board[i] == col:
             return False
-    
+
     # Check upper left diagonal
     for i, j in zip(range(row, -1, -1), range(col, -1, -1)):
         if board[i] == j:
             return False
-    
+
     # Check upper right diagonal
     for i, j in zip(range(row, -1, -1), range(col, N)):
         if board[i] == j:
@@ -26,7 +26,7 @@ def solve_nqueens(N):
             solution = [[i, board[i]] for i in range(N)]
             print(solution)
             return
-        
+
         for col in range(N):
             if is_safe(board, row, col, N):
                 board[row] = col
@@ -42,7 +42,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: nqueens N")
         sys.exit(1)
-    
+
     try:
         N = int(sys.argv[1])
     except ValueError:
