@@ -1,10 +1,13 @@
-land perimeter computing module.
+#!/usr/bin/python3
+
+"""liand perimeter computing module.
 """
+
 
 
 def island_perimeter(grid):
     """Computes the perimeter of an island with no lakes.
-    """
+"""
     perimeter = 0
     if type(grid) != list:
         return 0
